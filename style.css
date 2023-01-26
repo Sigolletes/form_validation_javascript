@@ -9,12 +9,10 @@
 
 :root {
   --color1: rgb(88, 104, 100);
-  --color2: rgb(139, 132, 124);
-  --color3: rgb(214, 235, 228);
-  --color4: rgb(140, 156, 152);
-  --color5: rgb(181, 194, 190);
-  --green: rgb(107, 139, 82);
-  --red: rgb(208, 77, 77);
+  --color2: rgb(214, 235, 228);
+  --color3: rgb(241, 251, 247);
+  --color4: rgb(149, 56, 56);
+  --color5: rgb(58, 133, 32);
 }
 
 body {
@@ -50,13 +48,40 @@ input {
   text-align: center;
   padding: 3px;
   border-radius: 9px;
-  font-size: clamp(15px, 3vw, 22px);
+  font-size: clamp(15px, 3.5vw, 22px);
   color: var(--color1);
   border: 3px double rgba(188, 214, 203, 0.95);
+  outline: none;
+}
+
+input:hover, #submit:hover {
+  transform: scale(1.1);
+}
+
+input:active, input:focus {
+  box-shadow: 0 0 25px var(--color3);
+  transform: scale(1.1);
+}
+
+.errorInput {
+  box-shadow: 0 0 25px var(--color4);
+}
+
+::placeholder {
+  color:rgb(115, 176, 151)
 }
 
 h2 {
-  font-size: clamp(15px, 3vw, 22px);
+  font-size: clamp(15px, 3.5vw, 22px);
+  color: var(--color5);
+}
+
+.error {
+  color: var(--color4);
+}
+
+.success {
+  color: var(--color5);
 }
 
 #submit {
@@ -65,7 +90,8 @@ h2 {
   font-weight: bold;
   letter-spacing: 1.3px;
   border-radius: 9px;
-  border: 3px double rgba(84, 80, 76, 0.95);
-  background-color: var(--color2);
-  color: var(--color3);
+  border: 3px double rgba(188, 214, 203, 0.95);
+  background-color: var(--color1);
+  color: var(--color2);
+  cursor: pointer;
 }
