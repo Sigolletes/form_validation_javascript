@@ -14,12 +14,12 @@
       <form>
         <input type="email" id="email" name="email" placeholder="email"  required>
         <input type="text" id="country" name="country" placeholder="country" required>
-        <input type="text" id="zip" name="zip" pattern="/^[0-9]{5}(?:-[0-9]{4})?$/" placeholder="zip code" required>
+        <input type="text" id="zip" name="zip" pattern="^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$" placeholder="zip code (Spain)" required>
         <input type="password" id="password" name="password" placeholder="password" required>
         <input type="password" id="confirmation" name="confirmation" placeholder="repeat password" required>
+        <button id="submit" type="submit">SUBMIT</button>
       </form>
-      <h2 id="alert">Error message</h2>
-      <button id="submit" type="submit">SUBMIT</button>
+      <h2 id="alert"></h2>
     </main>
   </body>
 </html>
